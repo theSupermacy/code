@@ -6,6 +6,42 @@
 int SIZE= 1000000+1;
 int primeArr[SIZE];
 using namespace std;
+void calculatePrime();
+int isPrime(int n);
+int getMax(long int n);
+void calculatePrime()
+        {
+        primeArr[0]=1;
+        primeArr[1]=1;
+        for (int i=2;i*i<=SIZE;i++)
+                {
+        //      cout<<i;
+                        if(!primeArr[i])
+                        for(int j=2;j*i<SIZE;j++)
+                        primeArr[j*i]=1;
+
+                }
+}
+
+int isPrime(int n){
+retrun primeArr[n];
+}
+
+int getMax(long int i)
+{
+	int n,k;
+	for(int  j =2;j*j<=i;j++)
+	{
+		if(i/j==0)
+		{
+		n=j;
+		k=i/j;
+		}
+	}
+	n=(j>k)?j:k
+	return n 	
+}
+
 int main()
 {
 	for(int i = 0 ; i < SIZE;i++)
@@ -35,22 +71,4 @@ int main()
 			
 	return 0;
 }
-int isPrime(int n){
-retrun primeArr[n];
-}
-void calculatePrime()
-	{
-	primeArr[0]=1;
-	primeArr[1]=1;
-	for (int i=2;i*i<=SIZE;i++)
-		{
-	//	cout<<i;
-			if(!primeArr[i])
-			for(int j=2;j*i<SIZE;j++)
-			primeArr[j*i]=1;
-				
-		}
-}
-
-
 
