@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+
+int arr[15][15];
+
+bool checkplus(int i, int c, int cj);
+void transfer(char charArr[][15] , int m , int n);
+
+
+void transfer(char charArr[][15], int n , int m)
+{
+	for(int i = 0;i<n;i++)
+	{
+	for(int j=0;j<m;j++)
+	{
+		if(charArr[i][j]=='G')
+				arr[i][j]=1;
+				}
+	}
+	}
+
+
+bool checkplus(int n, int ci , int cj)
+{
+	for( int j =0  ; j < n;j++)
+		{
+			cout<<arr[ci+n/2][ci+j]<<arr[cj+j][cj+n/2];
+			if(!arr[ci+n/2][ci+j] or !arr[cj+j][cj+n/2])
+		return false;
+		}
+return true;
+}
+int main ()
+{
+	for ( int  i = 0 ; i < 15;i++)
+		for ( int j= 0 ; j< 15; j++)
+		arr[i][j] = 0;
+	int n, m;
+	cin>>n>>m;
+	char chararr[15][15];
+	for(int i = 0 ; i< n ;i++)
+		for (int j =0; j< m ; j++)
+			cin>>chararr[i][j];
+	transfer(chararr, n, m);
+	for(int i =0 ; i < n;i++)
+	{
+		for ( int j = 0 ; j < m; j++)
+		{
+			cout<<arr[i][j];
+		}
+		cout<<endl;
+	}
+	bool val= checkplus(3, 1, 0);
+	cout<<val;
+	return 0;
+}
+

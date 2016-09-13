@@ -1,0 +1,46 @@
+#include<iostream>
+#include<cmath>
+
+using namespace std;
+//int getLoc(int , int arr[],int,int);
+int getLoc(int x,int arr[],int n,int st){
+        for(int i =st+1;i<n;i++) 
+        {
+            if( arr[i]==x ) 
+	    {
+	//	    cout<<x<<"tetingggg"<<endl;
+		    return i;
+	    }
+        }
+    return -1;
+}
+int main()
+{
+        int t,m,n;
+        cin>>t;
+        while(t--)      
+        {
+        cin>>m>>n;
+        int arr[n];
+        int costmap[10000];
+        for(int i=0;i<10000;i++) costmap[i] = 0;
+        for(int i =0;i<n;i++){
+                cin>>arr[i];
+                costmap[arr[i]]=1;
+        }
+        int i,j,globali=0;
+	j=-1;
+	while(j==-1){
+        for(i = globali ; i<n;i++)
+                if(m-arr[i]>0 and costmap[m-arr[i]]) break;
+	globali=i+1;
+	//cout<<globali<<endl;
+        j = getLoc(m-arr[i],arr,n,i);
+	}
+       //`	cout<<arr[i]<<"teting is done"<<m<<" "<<i<<endl;
+        cout<<min(i,j)+1<<" "<<max(i,j)+1<<endl;
+        } 
+        return 0;
+}
+
+
