@@ -1,4 +1,4 @@
-/* This code is for question in HackerRank,The question name is Left Rotation*/
+//https://www.hackerrank.com/challenges/array-left-rotation
 #include <iostream>
 #include <cmath>
 int SIZE= 1000000+1;
