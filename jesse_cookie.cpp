@@ -55,7 +55,7 @@ void perculup(long long int minHeap[],long long int length){
 		templength = templength/2;
 	}
 	return;
-}	
+}
 long int getMin(long long int arr[],long int &length){
 	long int minElement = arr[1];
 	deleteRoot(arr,length);
@@ -87,7 +87,8 @@ void deleteRoot(long long int minHeap[], long int &length){
 	}
 		if (left == length+1 && minHeap[index])    {
 			temp = minHeap[index];
-			minHeap[index] = minHeap[left];						        minHeap[left] = temp;
+			minHeap[index] = minHeap[left];
+      minHeap[left] = temp;
 		    }
 	length--;
 	return;
