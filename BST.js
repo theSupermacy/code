@@ -119,7 +119,6 @@ function percup(self) {
       if(arr[length]>=arr[Math.floor(length/2)]) break;
       console.log('aaya main',length)
       var temp = arr[length];
-
       arr[length] = arr[Math.floor(length/2)];
       arr[Math.floor(length/2)]=temp;
       length = Math.floor(length/2);
