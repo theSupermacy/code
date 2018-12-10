@@ -1,0 +1,25 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "Code data Structure code and competitve coding ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theSupermacy/code.git"
+  },
+  "keywords": [
+    "code"
+  ],
+  "author": "theSupermacy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theSupermacy/code/issues"
+  },
+  "homepage": "https://github.com/theSupermacy/code#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
+}
