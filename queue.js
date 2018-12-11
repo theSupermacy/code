@@ -5,13 +5,13 @@ const createQueue = function() {
             array.unshift(ele)
         },
         dequeue(){
-            array.shift()
+            array.pop()
         },
         isEmpty(){
             return array.length === 0 
         },
         peek(){
-            return array
+            return array[array.length - 1]
         },
         currentLength(){
             return array.length
